@@ -22,4 +22,4 @@ Open up terminal and perform these cmds.
 
     `$ mrt`
     
-You can now go to http://localhost:3000 in your browser
+You can now access it at (http://localhost:3000)[http://localhost:3000] in your browser
