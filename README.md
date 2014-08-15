@@ -21,3 +21,5 @@ Open up terminal and perform these cmds.
 5. Start server
 
     `$ mrt`
+    
+You can now go to http://localhost:3000 in your browser
