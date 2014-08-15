@@ -4,7 +4,7 @@ templateName = "index"
 # Route
 Router.map ->
   @route templateName,
-    path: "/",
+    path: "/"
     onBeforeAction: ->
       Router.go "/sign-in" unless Meteor.loggingIn() and Meteor.user()
       return
