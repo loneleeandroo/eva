@@ -1,4 +1,77 @@
 template(name="index")
-	h1 Hello World!
-	span {{greeting}} 
-	input(type="button", value="Click") 
+  .row.row-full-height
+    aside.col-xs-2.well.full-height-background
+    aside.col-xs-2
+      .text-center
+        .btn-group
+          button.btn.btn-danger.btn-lg(type='button') 
+            i.fa.fa-plus
+            span Create New Project
+            button.btn.btn-danger.btn-lg.dropdown-toggle(type='button', data-toggle='dropdown')
+              span.caret
+              span.sr-only Toggle Dropdown
+            ul.dropdown-menu(role='menu')
+              li
+                a(href='#') Action
+              li
+                a(href='#') Another action
+              li
+                a(href='#') Something else here
+              li.divider
+              li
+                a(href='#') Separated link
+      hr
+      ul.media-list.module-list
+        li.media
+          img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
+          .media-body
+            .media-heading-container
+              h4.media-heading Module X
+          ul.topic-list
+            li.media
+              img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
+              .media-body
+                .media-heading-container
+                  h4.media-heading Topic A
+            li.media
+              img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
+              .media-body
+                .media-heading-container
+                  h4.media-heading Topic B
+            li.media
+              img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
+              .media-body
+                .media-heading-container
+                  h4.media-heading Topic C
+        li.media
+          img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
+          .media-body
+            .media-heading-container
+              h4.media-heading Module Y
+          ul.topic-list
+            li.media
+              img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
+              .media-body
+                .media-heading-container
+                  h4.media-heading Topic A
+            li.media
+              img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
+              .media-body
+                .media-heading-container
+                  h4.media-heading Topic B
+
+    article.col-xs-10
+      h1.page-header.thumbnail-header Topic A
+      ul#items.thumbnail-group
+        each slides
+          li.col-xs-6.col-md-3
+            a.lesson-thumbnail.thumbnail(href="#")
+              .thumbnail-inner.lesson-thumbnail-inner
+                h3.text-center.thumbnail-caption {{title}}
+      .col-xs-6.col-md-3
+        a.add-thumbnail.thumbnail(href="#")
+          .thumbnail-inner
+            h3.text-center.thumbnail-caption 
+              i.fa.fa-plus-square
+              span Add Slide
+    

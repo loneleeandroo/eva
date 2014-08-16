@@ -12,3 +12,8 @@ accounts-entry
 coffeescript
 stylus
 jade
+accounts-password
+accounts-ui
+font-awesome
+holder
+jquery-ui-sortable

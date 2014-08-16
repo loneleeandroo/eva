@@ -3,6 +3,9 @@
     "iron-router": {},
     "bootstrap-3": {},
     "accounts-entry": {},
-    "jade": {}
+    "jade": {},
+    "font-awesome": {},
+    "holder": {},
+    "jquery-ui-sortable": {}
   }
 }

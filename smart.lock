@@ -5,7 +5,10 @@
       "iron-router": {},
       "bootstrap-3": {},
       "accounts-entry": {},
-      "jade": {}
+      "jade": {},
+      "font-awesome": {},
+      "holder": {},
+      "jquery-ui-sortable": {}
     },
     "packages": {
       "iron-router": {
@@ -27,6 +30,21 @@
         "git": "https://github.com/mquandalle/meteor-jade.git",
         "tag": "v0.2.6",
         "commit": "ab1edd68dccae6f5e946d9a84547043816d57864"
+      },
+      "font-awesome": {
+        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
+        "tag": "v4.1.0",
+        "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
+      },
+      "holder": {
+        "git": "https://github.com/Dsyko/meteor-holder.git",
+        "tag": "v2.3.2",
+        "commit": "c2c1e297088318fc7e3c4b2e63d996cad37b28f2"
+      },
+      "jquery-ui-sortable": {
+        "git": "https://github.com/rgm/meteor-jquery-ui-sortable.git",
+        "tag": "v1.10.3",
+        "commit": "4423bd4b28cd81df91400a6bcb2a3d82e72894dc"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",
