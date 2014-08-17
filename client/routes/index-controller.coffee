@@ -94,7 +94,13 @@ Template[templateName].rendered = ->
   this.$('.topic-list').sortable(
     connectWith: ".topic-list"
   )
-  this.$('.slides').sortable()
+  this.$('.slides').sortable(
+    connectWith: ".slides"
+    cancel: ".unsortable-thumbnail"
+    stop: (event, ui) ->
+      if (ui.item.is(':last-child'))
+        ui.item.insertBefore(ui.item.siblings(".unsortable-thumbnail"))
+  )
 
 # Events
 Template[templateName].events 

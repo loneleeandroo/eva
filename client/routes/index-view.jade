@@ -51,7 +51,7 @@ template(name="index")
                 i.fa.fa-plus-square
                 span Add Module
 
-    article.col-xs-10
+    article.col-xs-10.thumnbail-container
       each modules
         h1 {{title}}
         each topics
@@ -59,13 +59,15 @@ template(name="index")
           div.row
             ul.slides.thumbnail-group
               each slides
-                li.col-xs-6.col-md-3
+                li.col-xs-6.col-md-3.sortable-thumbnail
                   a.lesson-thumbnail.thumbnail(href="#")
                     .thumbnail-inner.lesson-thumbnail-inner
                       h3.text-center.thumbnail-caption {{title}}
-            .col-xs-6.col-md-3
-              a.add-thumbnail.thumbnail(href="#")
-                .thumbnail-inner
-                  h3.text-center.thumbnail-caption 
-                    i.fa.fa-plus-square
-                    span Add Slide
+              li.col-xs-6.col-md-3.unsortable-thumbnail
+                a.add-thumbnail.thumbnail(href="#")
+                  .thumbnail-inner
+                    h3.text-center.thumbnail-caption 
+                      i.fa.fa-plus-square
+                      span Add Slide
+
+              
