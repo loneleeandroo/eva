@@ -1,0 +1,20 @@
+template(name="learn")
+  .row
+    h1.col-xs-4 Food
+    h1.col-xs-4 Drink
+    h1.col-xs-4 Stationery
+  .row
+    ul.media-list.col-xs-4.items.basket
+    ul.media-list.col-xs-4.items.basket
+    ul.media-list.col-xs-4.items.basket
+  hr
+  .row
+    h1.col-xs-4 Drag the following objects into the above groups:
+  .row
+    ul.media-list.basket.col-xs-4.items.free
+      each items
+        li.media
+          img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
+          .media-body
+            .media-heading-container
+              h4.media-heading {{name}}
