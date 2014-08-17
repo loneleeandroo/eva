@@ -22,16 +22,79 @@ Router.map ->
   return
 
 # Collection
-Template[templateName].slides = ->
-  return Slides.find().fetch()
+Template[templateName].modules = ->
+  return [
+    {
+      title: "Module X"
+      _id: new Meteor.Collection.ObjectID()._str
+      topics: [
+        {
+          title: "Topic A"
+          _id: new Meteor.Collection.ObjectID()._str
+          slides: [
+            {
+              title: "Slide 1"
+            }
+            {
+              title: "Slide 2"
+            }
+          ]
+        }
+        {
+          title: "Topic B"
+          _id: new Meteor.Collection.ObjectID()._str
+          slides: [
+            {
+              title: "Slide 3"
+            }
+          ]
+        }
+        {
+          title: "Topic C"
+          _id: new Meteor.Collection.ObjectID()._str
+          slides: [
+            {
+              title: "Slide 4"
+            }
+          ]
+        }
+      ]
+    }
+    {
+      title: "Module Y"
+      _id: new Meteor.Collection.ObjectID()._str
+      topics: [
+        {
+          title: "Topic D"
+          _id: new Meteor.Collection.ObjectID()._str
+          slides: [
+            {
+              title: "Slide 5"
+            }
+          ]
+        }
+        {
+          title: "Topic E"
+          _id: new Meteor.Collection.ObjectID()._str
+          slides: [
+            {
+              title: "Slide 6"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 
 # Rendered
 Template[templateName].rendered = ->
   Holder.run()
 
-  this.$('#items').sortable()
   this.$('.module-list').sortable()
-  this.$('.topic-list').sortable()
+  this.$('.topic-list').sortable(
+    connectWith: ".topic-list"
+  )
+  this.$('.slides').sortable()
 
 # Events
 Template[templateName].events 

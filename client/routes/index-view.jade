@@ -21,57 +21,51 @@ template(name="index")
               li
                 a(href='#') Separated link
       hr
-      ul.media-list.module-list
-        li.media
-          img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
-          .media-body
-            .media-heading-container
-              h4.media-heading Module X
-          ul.topic-list
-            li.media
-              img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
-              .media-body
-                .media-heading-container
-                  h4.media-heading Topic A
-            li.media
-              img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
-              .media-body
-                .media-heading-container
-                  h4.media-heading Topic B
-            li.media
-              img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
-              .media-body
-                .media-heading-container
-                  h4.media-heading Topic C
-        li.media
-          img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
-          .media-body
-            .media-heading-container
-              h4.media-heading Module Y
-          ul.topic-list
-            li.media
-              img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
-              .media-body
-                .media-heading-container
-                  h4.media-heading Topic A
-            li.media
-              img.pull-left.media-object.media-thumbnail(data-src="holder.js/64x64")
-              .media-body
-                .media-heading-container
-                  h4.media-heading Topic B
+      ul.media-list.module-list.nav.nav-pills.nav-stacked
+        each modules
+          li.media
+            a.media-body(data-target="#{{_id}}-topic-list", data-toggle="collapse", href="#")
+              img.pull-left.media-object.media-thumbnail(data-src="holder.js/60x60")
+              .media-heading-container
+                h4.media-heading {{title}}
+            .collapse(id="{{_id}}-topic-list")
+              ul.topic-list.nav.nav-pills.nav-stacked
+                each topics
+                  li.media
+                    a.media-body(href="#{{title}}")
+                      img.pull-left.media-object.media-thumbnail(data-src="holder.js/60x60")
+                      .media-heading-container
+                        h4.media-heading {{title}}
+              ul.add-topic.nav.nav-pills.nav-stacked
+                li.media.add-media
+                  a.media-body
+                    .media-heading-container.text-center
+                      h4.media-heading 
+                        i.fa.fa-plus-square
+                        span Add Topic
+      ul.media-list.add-module.nav.nav-pills.nav-stacked
+        li.media.add-media
+          a.media-body
+            .media-heading-container.text-center
+              h4.media-heading 
+                i.fa.fa-plus-square
+                span Add Module
 
     article.col-xs-10
-      h1.page-header.thumbnail-header Topic A
-      ul#items.thumbnail-group
-        each slides
-          li.col-xs-6.col-md-3
-            a.lesson-thumbnail.thumbnail(href="#")
-              .thumbnail-inner.lesson-thumbnail-inner
-                h3.text-center.thumbnail-caption {{title}}
-      .col-xs-6.col-md-3
-        a.add-thumbnail.thumbnail(href="#")
-          .thumbnail-inner
-            h3.text-center.thumbnail-caption 
-              i.fa.fa-plus-square
-              span Add Slide
-    
+      each modules
+        h1 {{title}}
+        each topics
+          h1.page-header.thumbnail-header(id="{{title}}") {{title}}
+          div.row
+            ul.slides.thumbnail-group
+              each slides
+                li.col-xs-6.col-md-3
+                  a.lesson-thumbnail.thumbnail(href="#")
+                    .thumbnail-inner.lesson-thumbnail-inner
+                      h3.text-center.thumbnail-caption {{title}}
+            .col-xs-6.col-md-3
+              a.add-thumbnail.thumbnail(href="#")
+                .thumbnail-inner
+                  h3.text-center.thumbnail-caption 
+                    i.fa.fa-plus-square
+                    span Add Slide
