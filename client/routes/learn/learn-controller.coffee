@@ -34,7 +34,7 @@ Template[templateName].modules= ->
   modules = []
   i = 0
 
-  while i < 20
+  while i < 3
     data =
       title: "Module " + (i+1)
       _id: new Meteor.Collection.ObjectID()._str
@@ -46,6 +46,7 @@ Template[templateName].modules= ->
 
 # Rendered
 Template[templateName].rendered = ->
+
   $('.carousel-primary-navigation').slick(
     dots: true
     slidesToShow: 4
@@ -70,6 +71,14 @@ Template[templateName].rendered = ->
           slidesToScroll: 1
       }
     ]
+  )
+  
+
+  $('.slick').slick(
+    centerMode: true
+    centerPadding: '60px'
+    slidesToShow: 3
+    slidesToScroll: 3
   )
 
   Holder.run()

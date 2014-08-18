@@ -1,14 +1,14 @@
 template(name="learn")
   .row.text-center
     h1.title Course Name
-  .container
-    .carousel-primary-navigation 
-      each modules
-        .text-center
-          .new-module
+    
+    .container
+      .row
+        each modules
+          .responsive-center-thumbnails.col-lg-3.col-md-4.col-sm-6
             a.thumbnail.square-thumbnail(href="/learn/module-x")
               img(data-src="holder.js/100%x100%")
-          h2.module-header {{title}}
+            h2(style="color: white; margin-top: -10px; min-height: 100px") {{title}}
 //-
   .row
     h1.col-xs-4 Food

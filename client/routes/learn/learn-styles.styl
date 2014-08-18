@@ -1,3 +1,12 @@
+.row.learn-header
+  background-color transparent
+  position absolute
+  width 100%
+  top 0
+  height: 50px
+  padding-left 15px
+  padding-right 15px
+
 ul.basket
   height: 400px;
   border: 2px dashed #ddd;
@@ -13,8 +22,24 @@ ul.free li:first-child
 .title
   color white
   font-size 60px
-  margin-top 90px
-  margin-bottom 20px
+  margin-top 70px
+  margin-bottom 30px
+
+.back-header span,
+.back-header i
+  color white
+  opacity 0.4
+
+.back-header:hover
+  text-decoration none
+
+ .back-header h3
+  margin-top: 10px; 
+
+.back-header:hover span,
+.back-header:hover i
+  color white
+  opacity 0.8
 
 .module
   float none
@@ -100,25 +125,29 @@ a.thumbnail.square-thumbnail img {
   margin-right -15px
 
 // Responsive
-/*
 @media (min-width: 1200px)
-  .carousel-primary-navigation a.thumbnail
-    height 245px
+  .responsive-center-thumbnails:nth-child(1),
+  .responsive-center-thumbnails:nth-child(2),
+  .responsive-center-thumbnails:nth-child(3),
+  .responsive-center-thumbnails:nth-child(4)
+    float none
+    display inline-block
 
 @media (min-width: 992px) and (max-width: 1199px)
-  .carousel-primary-navigation a.thumbnail
-    height 267px
+  .responsive-center-thumbnails:nth-child(1),
+  .responsive-center-thumbnails:nth-child(2),
+  .responsive-center-thumbnails:nth-child(3)
+    float none
+    display inline-block
 
 @media (min-width: 768px) and (max-width: 991px)
-  .carousel-primary-navigation a.thumbnail
-    height 300px
+  .responsive-center-thumbnails:nth-child(1),
+  .responsive-center-thumbnails:nth-child(2)
+    float none
+    display inline-block
 
-@media (max-width: 767px)
-  .title
-    margin-top 100px
+//@media (max-width: 767px)
 
-  .carousel-primary-navigation a.thumbnail
-    min-height 480px
-    height auto
-*/
+
+
 
