@@ -2,11 +2,11 @@ template(name="learn")
   .row.text-center
     h1.title Course Name
   .container
-    .slick
+    .carousel-primary-navigation 
       each modules
         .text-center
           .new-module
-            a.thumbnail(href="/learn/module-x")
+            a.thumbnail.square-thumbnail(href="/learn/module-x")
               img(data-src="holder.js/100%x100%")
           h2.module-header {{title}}
 //-

@@ -13,8 +13,8 @@ ul.free li:first-child
 .title
   color white
   font-size 60px
-  margin-top 200px
-  margin-bottom 100px
+  margin-top 90px
+  margin-bottom 20px
 
 .module
   float none
@@ -32,40 +32,93 @@ ul.free li:first-child
 .module a:hover
   text-decoration none
 
-.slick-prev 
+.new-module a.thumbnail
+  margin-bottom 0
+
+a.thumbnail.square-thumbnail {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: initial
+}
+a.thumbnail.square-thumbnail:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+a.thumbnail.square-thumbnail img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: silver;
+}
+
+// carousel-modules
+.carousel-primary-navigation
+  margin-left: 40px;
+  margin-right: 40px;
+
+.carousel-primary-navigation .slick-prev 
   margin-left -40px
 
-.slick-next
+.carousel-primary-navigation  .slick-next
   margin-right -40px
 
-.slick-prev,
-.slick-next
+.carousel-primary-navigation  .slick-prev,
+.carousel-primary-navigation  .slick-next
   margin-top -40px
   height 60px
   width 60px
 
-.slick-prev:before
+.carousel-primary-navigation .slick-prev:before
   font-size 60px
 
-.slick-next:before
+.carousel-primary-navigation .slick-next:before
   font-size 60px
 
-.carousel-navigation
+// carousel-navigation
+.carousel-secondary-navigation
   margin-left 35px
   margin-right 40px
 
-.carousel-navigation .slick-next:before,
-.carousel-navigation .slick-prev:before
+.carousel-secondary-navigation .slick-next:before,
+.carousel-secondary-navigation .slick-prev:before
   font-size 40px
 
-.carousel-navigation .slick-prev,
-.carousel-navigation .slick-next
+.carousel-secondary-navigation .slick-prev,
+.carousel-secondary-navigation .slick-next
   margin-top -25px
   height 40px
   width 40px
 
-.carousel-navigation .slick-prev
+.carousel-secondary-navigation .slick-prev
   margin-left -15px
 
-.carousel-navigation .slick-next
+.carousel-secondary-navigation .slick-next
   margin-right -15px
+
+// Responsive
+/*
+@media (min-width: 1200px)
+  .carousel-primary-navigation a.thumbnail
+    height 245px
+
+@media (min-width: 992px) and (max-width: 1199px)
+  .carousel-primary-navigation a.thumbnail
+    height 267px
+
+@media (min-width: 768px) and (max-width: 991px)
+  .carousel-primary-navigation a.thumbnail
+    height 300px
+
+@media (max-width: 767px)
+  .title
+    margin-top 100px
+
+  .carousel-primary-navigation a.thumbnail
+    min-height 480px
+    height auto
+*/
+
