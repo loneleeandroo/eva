@@ -6,6 +6,7 @@
     "jade": {},
     "font-awesome": {},
     "holder": {},
-    "jquery-ui-sortable": {}
+    "jquery-ui-sortable": {},
+    "slick": {}
   }
 }
