@@ -9,16 +9,58 @@ Router.map ->
 
 Template[templateName].modules= ->
 
-  modules = []
-  i = 0
-
-  while i < 3
-    data =
-      title: "Module " + (i+1)
+  modules = [
+    {
+      english: "Shopping & Convenience Stores"
+      japanese: [
+        {
+          display: "買い物"
+          phonetic: "かいもの"
+        }
+        {
+          display: "と"
+        }
+        {
+          display: "コンビニ"
+        }
+      ]
+      imageUrl: "images/shibuya109.jpg"
+      moduleUrl: "/learn/module-x"
+      private: false
       _id: new Meteor.Collection.ObjectID()._str
-
-    modules.push data
-    i++
+    }
+    {
+      english: "Myself & Family"
+      japanese: [
+        {
+          display: "私"
+          phonetic: "わたし"
+        }
+        {
+          display: "と"
+        }
+        {
+          display: "家族"
+          phonetic: "かぞく"
+        }
+      ]
+      moduleUrl: "#"
+      private: true
+      _id: new Meteor.Collection.ObjectID()._str
+    }
+    {
+      english: "Interests"
+      japanese: [
+        {
+          display: "趣味"
+          phonetic: "しゅみ"
+        }
+      ]
+      moduleUrl: "#"
+      private: true
+      _id: new Meteor.Collection.ObjectID()._str
+    }
+  ]
 
   return modules
 

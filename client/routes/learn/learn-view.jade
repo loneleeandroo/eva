@@ -1,14 +1,25 @@
 template(name="learn")
   .row.text-center
-    h1.title Course Name
+    h1.title Year 8 Japanese
     
     .container
       .row
         each modules
           .responsive-center-thumbnails.col-lg-3.col-md-4.col-sm-6
-            a.thumbnail.square-thumbnail(href="/learn/module-x")
-              img(data-src="holder.js/100%x100%")
-            h2(style="color: white; margin-top: -10px; min-height: 100px") {{title}}
+            a.thumbnail.square-thumbnail(href="{{moduleUrl}}")
+              img(src="{{imageUrl}}")
+              if private
+                .private-thumbnail 
+                  .private-thumbnail-inner
+                    h3 Coming Soon!
+
+            h2(style="color: white; margin-top: 0;min-height: 150px") 
+              each japanese
+                span(style="position:relative;") 
+                  | {{display}}
+                  if phonetic
+                    small.phonetic {{phonetic}}
+              small(style="display:block;color:white; opacity:0.8;") {{english}}
 //-
   .row
     h1.col-xs-4 Food

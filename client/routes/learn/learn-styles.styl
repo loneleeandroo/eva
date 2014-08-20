@@ -139,6 +139,16 @@ ul.free li:first-child
   padding-left 15px
   padding-right 15px
 
+small.phonetic
+  position absolute
+  top 0
+  left 0
+  width 100%
+  font-size 12px
+  margin-top: -10px
+  color white
+  opacity 0.7
+
 .title
   color white
   font-size 60px
@@ -158,6 +168,29 @@ a.back-header i
 a.back-header:hover span,
 a.back-header:hover i
   color white
+  opacity 0.8
+
+a.thumbnail.square-thumbnail .private-thumbnail
+  display none
+  position absolute
+  top 0
+  left 0
+  height 100%
+  width 100%
+  background black
+
+a.thumbnail.square-thumbnail .private-thumbnail-inner
+  display table
+  height 100%
+  width 100%
+
+a.thumbnail.square-thumbnail .private-thumbnail-inner h3
+  display table-cell
+  vertical-align middle
+  color white
+
+a.thumbnail.square-thumbnail:hover .private-thumbnail
+  display block
   opacity 0.8
 
 a.thumbnail.square-thumbnail {
@@ -188,6 +221,7 @@ a.thumbnail.square-thumbnail img {
   .responsive-center-thumbnails:nth-child(4)
     float none
     display inline-block
+    vertical-align top
 
   .title
     margin-top 70px
@@ -199,6 +233,7 @@ a.thumbnail.square-thumbnail img {
   .responsive-center-thumbnails:nth-child(3)
     float none
     display inline-block
+    vertical-align top
 
   .title
     margin-top 0px
@@ -209,6 +244,7 @@ a.thumbnail.square-thumbnail img {
   .responsive-center-thumbnails:nth-child(2)
     float none
     display inline-block
+    vertical-align top
 
   .title
     margin-top 0px
