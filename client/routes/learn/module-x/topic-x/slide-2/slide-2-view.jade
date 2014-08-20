@@ -31,10 +31,11 @@ template(name="slide-2")
         h1(style="color:white;") Drag these Japanese Words to the Correct Group Above
         ul#question-basket.items.free.basket(style="padding-top:40px")
           each items
-            li.draggable(id="{{japanese}}")
+            li.draggable.audible(id="{{japanese}}")
               .panel.panel-default
                 .panel-body
                   h4 {{japanese}}
+                  a.audible-listen-link.fa.fa-volume-up.fa-lg(id="{{_id}}")
 
   #createNewModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
     .modal-dialog
