@@ -7,8 +7,15 @@ Router.map ->
     path: "/learn"
   return
 
-Template[templateName].modules= ->
+# Rendered
+Template[templateName].rendered = ->
+  $('header').hide()
+  $('footer').hide()
+  $('html').css('background-color', '#1abc9c')
+  $('body').css('background-color', '#1abc9c')
 
+# Collections
+Template[templateName].modules= ->
   modules = [
     {
       english: "Shopping & Convenience Stores"
@@ -24,7 +31,7 @@ Template[templateName].modules= ->
           display: "コンビニ"
         }
       ]
-      imageUrl: "images/shibuya109.jpg"
+      imageUrl: "images/shopping.png"
       moduleUrl: "/learn/module-x"
       private: false
       _id: new Meteor.Collection.ObjectID()._str
@@ -44,6 +51,7 @@ Template[templateName].modules= ->
           phonetic: "かぞく"
         }
       ]
+      imageUrl: "images/family.png"
       moduleUrl: "#"
       private: true
       _id: new Meteor.Collection.ObjectID()._str
@@ -56,54 +64,10 @@ Template[templateName].modules= ->
           phonetic: "しゅみ"
         }
       ]
+      imageUrl: "images/interests.png"
       moduleUrl: "#"
       private: true
       _id: new Meteor.Collection.ObjectID()._str
     }
   ]
-
-  return modules
-
-# Rendered
-Template[templateName].rendered = ->
-
-  $('.carousel-primary-navigation').slick(
-    dots: true
-    slidesToShow: 4
-    slidesToScroll: 4
-    responsive: [
-      {
-        breakpoint: 1200
-        settings: 
-          slidesToShow: 3
-          slidesToScroll: 3
-      }
-      {
-        breakpoint: 992
-        settings: 
-          slidesToShow: 2
-          slidesToScroll: 2
-      }
-      {
-        breakpoint: 768
-        settings: 
-          slidesToShow: 1
-          slidesToScroll: 1
-      }
-    ]
-  )
-  
-
-  $('.slick').slick(
-    centerMode: true
-    centerPadding: '60px'
-    slidesToShow: 3
-    slidesToScroll: 3
-  )
-
-  Holder.run()
-
-  $('header').hide()
-  $('footer').hide()
-  $('html').css('background-color', '#1abc9c')
-  $('body').css('background-color', '#1abc9c')
+  modules
