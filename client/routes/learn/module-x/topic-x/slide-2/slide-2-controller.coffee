@@ -90,6 +90,7 @@ Template[templateName].events
 Template[templateName].items = ->
   items = [
     {
+      _id: 'f29bf281c4bfe811529e4385',
       japanese: "ペン",
       english: "Pen",
       group: "Lifestyle"
@@ -211,4 +212,4 @@ Template[templateName].items = ->
     }
   ]
 
-  return shuffleArray(items)
+  shuffleArray(items)

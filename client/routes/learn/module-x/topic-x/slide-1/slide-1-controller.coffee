@@ -44,6 +44,11 @@ Template[templateName].rendered = ->
 
 # Events
 Template[templateName].events 
+  "click a.audible-listen-link": (event) ->
+    name = $(event.target).attr('id')
+    sound = new buzz.sound("/audio/" + name + ".mp3")
+    sound.play()
+
   "click button#modal-button": (event) ->
     $('#createNewModal').modal('hide')
     if Session.get("isCorrect")
@@ -92,7 +97,8 @@ Template[templateName].events
 # Collections
 Template[templateName].items = ->
   items = [
-    {
+    { 
+      _id: 'f29bf281c4bfe811529e4385',
       japanese: "ペン",
       english: "Pen",
       group: "Lifestyle"
@@ -214,4 +220,4 @@ Template[templateName].items = ->
     }
   ]
 
-  return shuffleArray(items)
+  shuffleArray(items)

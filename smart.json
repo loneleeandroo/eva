@@ -1,12 +1,15 @@
 {
   "packages": {
-    "iron-router": {},
+    "iron-router": {
+        "version": "0.8.2"
+    },
     "bootstrap-3": {},
     "accounts-entry": {},
     "jade": {},
     "font-awesome": {},
     "holder": {},
     "jquery-ui-sortable": {},
-    "slick": {}
+    "slick": {},
+    "buzz.js": {}
   }
 }
