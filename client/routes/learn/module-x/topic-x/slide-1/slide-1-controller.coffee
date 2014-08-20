@@ -49,8 +49,6 @@ Template[templateName].events
     sound = new buzz.sound("/audio/" + name + ".m4a")
     sound.load().play()
 
-    console.log(new Meteor.Collection.ObjectID()._str)
-
   "click button#modal-button": (event) ->
     $('#createNewModal').modal('hide')
     if Session.get("isCorrect")
