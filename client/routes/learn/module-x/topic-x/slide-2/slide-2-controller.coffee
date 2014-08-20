@@ -41,6 +41,11 @@ Template[templateName].rendered = ->
 
 # Events
 Template[templateName].events 
+  "click a.audible-listen-link": (event) ->
+    name = $(event.target).attr('id')
+    sound = new buzz.sound("/audio/" + name + ".m4a")
+    sound.load().play()
+    
   "click button#modal-button": (event) ->
     $('#createNewModal').modal('hide')
     if Session.get("isCorrect")
