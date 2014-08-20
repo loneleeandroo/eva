@@ -1,6 +1,17 @@
 # Set template name
 templateName = "slide-2"
 
+shuffleArray = (array) ->
+  i = array.length - 1
+
+  while i > 0
+    j = Math.floor(Math.random() * (i + 1))
+    temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+    i--
+  array
+
 # Route
 Router.map ->
   @route templateName,
@@ -77,7 +88,7 @@ Template[templateName].events
 
 # Collections
 Template[templateName].items = ->
-  return [
+  items = [
     {
       japanese: "ペン",
       english: "Pen",
@@ -199,3 +210,5 @@ Template[templateName].items = ->
       group: "Food"
     }
   ]
+
+  return shuffleArray(items)
