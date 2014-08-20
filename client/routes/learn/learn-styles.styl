@@ -1,11 +1,34 @@
+.draggable
+  cursor move
+
 ul.basket
-  height: 400px;
-  border: 2px dashed #ddd;
+  min-height 180px
+  border 2px dashed #ddd
+  padding-bottom 20px
+  padding-top 20px
+  padding-right 25px
+
+ul.basket.answer-basket
+  list-style none
+
+ul.basket.answer-basket li
+  display inline-block
+  margin-left 10px
+
+ul.basket.answer-basket .ui-sortable-placeholder
+  max-height 85px !important
+  display none
+
+ul.basket.answer-basket li .panel
+  margin-bottom 0
+
+ul.basket.answer-basket li:first-child
+  margin-left 0
 
 ul.free li
-  display: inline-block
-  margin-left: 10px
-  margin-right: 10px
+  display inline-block
+  margin-left 10px
+  margin-right 10px
 
 ul.free li:first-child
   margin-left: 0
@@ -87,19 +110,20 @@ ul.free li:first-child
   color white
   font-size 60px
 
-.back-header span,
-.back-header i
+a.back-header span,
+a.back-header i
   color white
   opacity 0.4
 
 .back-header:hover
   text-decoration none
 
- .back-header h3
-  margin-top: 10px; 
+.back-header h3
+  margin-top: 10px;
+  color white 
 
-.back-header:hover span,
-.back-header:hover i
+a.back-header:hover span,
+a.back-header:hover i
   color white
   opacity 0.8
 

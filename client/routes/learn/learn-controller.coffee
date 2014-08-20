@@ -7,28 +7,6 @@ Router.map ->
     path: "/learn"
   return
 
-Template[templateName].items= ->
-  return [
-    {
-      name: "Apple"
-    }
-    {
-      name: "Pencil"
-    }
-    {
-      name: "Rubber"
-    }
-    {
-      name: "Orange"
-    }
-    {
-      name: "Coca-Cola"
-    }
-    {
-      name: "Water"
-    }
-  ]
-
 Template[templateName].modules= ->
 
   modules = []
@@ -87,11 +65,3 @@ Template[templateName].rendered = ->
   $('footer').hide()
   $('html').css('background-color', '#1abc9c')
   $('body').css('background-color', '#1abc9c')
-
-  this.$('#shopping-cart').sortable(
-    connectWith: "#items"
-  )
-
-  this.$('.items').sortable(
-    connectWith: ".items"
-  )
