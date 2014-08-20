@@ -1,0 +1,31 @@
+template(name="module-x")
+  .row.learn-header(style="")
+    a.back-header.pull-left(href="/learn", style="color:white;")
+      h3
+        i.fa.fa-chevron-left
+        span Modules
+
+  .row.text-center
+    h1.title 
+      span Module X
+
+    .container
+      .row
+        each topics
+          .responsive-center-thumbnails.col-lg-3.col-md-4.col-sm-6
+            a.thumbnail.square-thumbnail(href="/learn/module-x/topic-x/slide-1")
+              img(data-src="holder.js/100%x100%")
+            h3(style="color: white; margin-top: -10px; min-height: 100px") {{title}}
+                
+
+
+
+  //-
+    .container
+      .carousel-primary-navigation 
+        each topics
+          .text-center
+            .new-module
+              a.thumbnail.square-thumbnail(href="/learn/module-x")
+                img(data-src="holder.js/100%x100%")
+            h2.module-header {{title}}
