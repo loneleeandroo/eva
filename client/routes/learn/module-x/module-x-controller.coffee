@@ -7,41 +7,67 @@ Router.map ->
     path: "/learn/module-x"
   return
 
+# Rendered
+Template[templateName].rendered = ->
+  $('header').hide()
+  $('footer').hide()
+  $('html').css('background-color', '#3498db')
+  $('body').css('background-color', '#3498db')
+
+# Collections
 Template[templateName].modules= ->
-
-  modules = []
-  i = 0
-
-  while i < 20
-    data =
-      title: "Module " + (i+1)
+  modules = [
+    {
+      english: "Shopping & Convenience Stores"
+      japanese: [
+        {
+          display: "買い物"
+          phonetic: "かいもの"
+        }
+        {
+          display: "と"
+        }
+        {
+          display: "コンビニ"
+        }
+      ]
+      imageUrl: "images/shopping.png"
+      moduleUrl: "/learn/module-x"
+      private: false
       _id: new Meteor.Collection.ObjectID()._str
-
-    modules.push data
-    i++
-
-  return modules
+    }
+  ]
+  modules
 
 Template[templateName].topics= ->
-
   topics = []
   i = 0
 
   while i < 8
     data =
-      title: "Topic " + (i+1)
+      english: "Topic " + (i+1)
+      japanese: [
+        {
+          display: "買い物"
+          phonetic: "かいもの"
+        }
+        {
+          display: "と"
+        }
+        {
+          display: "コンビニ"
+        }
+      ]
+      imageUrl: "/images/shopping.png"
+      topicUrl: "#"
+      private: true
       _id: new Meteor.Collection.ObjectID()._str
+
+    if i is 0
+      data.topicUrl = '/learn/module-x/topic-x/slide-1'
+      data.private = false
 
     topics.push data
     i++
 
-  return topics
-
-# Rendered
-Template[templateName].rendered = ->
-  Holder.run()
-
-  $('header').hide()
-  $('footer').hide()
-  $('html').css('background-color', '#3498db')
-  $('body').css('background-color', '#3498db')
+  topics

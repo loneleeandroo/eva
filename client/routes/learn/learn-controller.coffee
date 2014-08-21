@@ -31,7 +31,7 @@ Template[templateName].modules= ->
           display: "コンビニ"
         }
       ]
-      imageUrl: "images/shopping.png"
+      imageUrl: "/images/shopping.png"
       moduleUrl: "/learn/module-x"
       private: false
       _id: new Meteor.Collection.ObjectID()._str
@@ -51,7 +51,7 @@ Template[templateName].modules= ->
           phonetic: "かぞく"
         }
       ]
-      imageUrl: "images/family.png"
+      imageUrl: "/images/family.png"
       moduleUrl: "#"
       private: true
       _id: new Meteor.Collection.ObjectID()._str
@@ -64,7 +64,7 @@ Template[templateName].modules= ->
           phonetic: "しゅみ"
         }
       ]
-      imageUrl: "images/interests.png"
+      imageUrl: "/images/interests.png"
       moduleUrl: "#"
       private: true
       _id: new Meteor.Collection.ObjectID()._str

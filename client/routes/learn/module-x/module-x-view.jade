@@ -6,26 +6,29 @@ template(name="module-x")
         span Modules
 
   .row.text-center
-    h1.title 
-      span 買い物 と コンビニ
+    each modules
+      h1.title
+        each japanese
+          span(style="position:relative;") 
+            | {{display}}
+            if phonetic
+              small.phonetic {{phonetic}}
+        small.translation {{english}}
 
     .container
       .row
         each topics
-          .responsive-center-thumbnails.col-lg-3.col-md-4.col-sm-6
-            a.thumbnail.square-thumbnail(href="/learn/module-x/topic-x/slide-1")
-              img(data-src="holder.js/100%x100%")
-            h3(style="color: white; margin-top: -10px; min-height: 100px") {{title}}
-                
-
-
-
-  //-
-    .container
-      .carousel-primary-navigation 
-        each topics
-          .text-center
-            .new-module
-              a.thumbnail.square-thumbnail(href="/learn/module-x")
-                img(data-src="holder.js/100%x100%")
-            h2.module-header {{title}}
+          .responsive-center-thumbnails.col-lg-3.col-md-4.col-xs-6
+            a.thumbnail.square-thumbnail(href="{{topicUrl}}")
+              img(src="{{imageUrl}}")
+              if private
+                .private-thumbnail 
+                  .private-thumbnail-inner
+                    h3 Coming Soon!
+            h3.topic-title
+              each japanese
+                span(style="position:relative;") 
+                  | {{display}}
+                  if phonetic
+                    small.phonetic {{phonetic}}
+              small.translation {{english}}

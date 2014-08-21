@@ -12,11 +12,10 @@ template(name="learn")
                 .private-thumbnail 
                   .private-thumbnail-inner
                     h3 Coming Soon!
-
-            h2(style="color: white; margin-top: 0;min-height: 150px") 
+            h2.module-title
               each japanese
                 span(style="position:relative;") 
                   | {{display}}
                   if phonetic
                     small.phonetic {{phonetic}}
-              small(style="display:block;color:white; opacity:0.8;") {{english}}
+              small.translation {{english}}

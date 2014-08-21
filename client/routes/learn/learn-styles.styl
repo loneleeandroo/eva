@@ -64,14 +64,14 @@ ul.free li
   margin-right 10px
 
 ul.free li:first-child
-  margin-left: 0
+  margin-left 0
 
 .module
   float none
   display inline-block
 
 .new-module  
-  margin: 10px;
+  margin 10px
 
 .module-header
   color white
@@ -85,90 +85,14 @@ ul.free li:first-child
 .new-module a.thumbnail
   margin-bottom 0
 
-/*
-// carousel-modules
-.carousel-primary-navigation
-  margin-left: 40px;
-  margin-right: 40px;
-
-.carousel-primary-navigation .slick-prev 
-  margin-left -40px
-
-.carousel-primary-navigation  .slick-next
-  margin-right -40px
-
-.carousel-primary-navigation  .slick-prev,
-.carousel-primary-navigation  .slick-next
-  margin-top -40px
-  height 60px
-  width 60px
-
-.carousel-primary-navigation .slick-prev:before
-  font-size 60px
-
-.carousel-primary-navigation .slick-next:before
-  font-size 60px
-
-// carousel-navigation
-.carousel-secondary-navigation
-  margin-left 35px
-  margin-right 40px
-
-.carousel-secondary-navigation .slick-next:before,
-.carousel-secondary-navigation .slick-prev:before
-  font-size 40px
-
-.carousel-secondary-navigation .slick-prev,
-.carousel-secondary-navigation .slick-next
-  margin-top -25px
-  height 40px
-  width 40px
-
-.carousel-secondary-navigation .slick-prev
-  margin-left -15px
-
-.carousel-secondary-navigation .slick-next
-  margin-right -15px
-*/
 .row.learn-header
   background-color transparent
   position absolute
   width 100%
   top 0
-  height: 50px
+  height 50px
   padding-left 15px
   padding-right 15px
-
-small.phonetic
-  position absolute
-  top 0
-  left 0
-  width 100%
-  font-size 12px
-  margin-top: -10px
-  color white
-  opacity 0.7
-
-.title
-  color white
-  font-size 60px
-
-a.back-header span,
-a.back-header i
-  color white
-  opacity 0.4
-
-.back-header:hover
-  text-decoration none
-
-.back-header h3
-  margin-top: 10px;
-  color white 
-
-a.back-header:hover span,
-a.back-header:hover i
-  color white
-  opacity 0.8
 
 a.thumbnail.square-thumbnail .private-thumbnail
   display none
@@ -194,27 +118,73 @@ a.thumbnail.square-thumbnail:hover .private-thumbnail
   opacity 0.8
 
 a.thumbnail.square-thumbnail {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: initial
+    display inline-block
+    position relative
+    width 100%
+    height initial
 }
 a.thumbnail.square-thumbnail:after {
-    content: '';
-    display: block;
-    margin-top: 100%;
+    content ''
+    display block
+    margin-top 100%
 }
 a.thumbnail.square-thumbnail img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: silver;
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    background-color silver
 }
 
+small.phonetic
+  position absolute
+  top 0
+  left 0
+  width 100%
+  font-size 12px
+  margin-top -10px
+  color white
+  opacity 0.7
+
+small.translation
+  display block
+  color white
+  opacity 0.8
+
+.title
+  color white
+  font-size 60px
+  margin-top 0px
+  margin-bottom 30px
+
+.topic-title, .module-title
+  color white 
+  margin-top 0px
+  min-height 130px
+
+.topic-title
+  min-height 100px
+
+a.back-header span,
+a.back-header i
+  color white
+  opacity 0.4
+
+.back-header:hover
+  text-decoration none
+
+.back-header h3
+  margin-top 10px
+  color white 
+
+a.back-headerhover span,
+a.back-headerhover i
+  color white
+  opacity 0.8
+
 // Responsive
-@media (min-width: 1200px)
+@media (min-width 1200px)
   .responsive-center-thumbnails:nth-child(1),
   .responsive-center-thumbnails:nth-child(2),
   .responsive-center-thumbnails:nth-child(3),
@@ -227,7 +197,12 @@ a.thumbnail.square-thumbnail img {
     margin-top 70px
     margin-bottom 30px
 
-@media (min-width: 992px) and (max-width: 1199px)
+  .title small.phonetic
+    font-size 30px
+    margin-top -25px
+
+
+@media (min-width 992px) and (max-width 1199px)
   .responsive-center-thumbnails:nth-child(1),
   .responsive-center-thumbnails:nth-child(2),
   .responsive-center-thumbnails:nth-child(3)
@@ -239,7 +214,11 @@ a.thumbnail.square-thumbnail img {
     margin-top 0px
     margin-bottom 30px
 
-@media (min-width: 768px) and (max-width: 991px)
+  .title small.phonetic
+    font-size 20px
+    margin-top -15px
+
+@media (min-width 768px) and (max-width 991px)
   .responsive-center-thumbnails:nth-child(1),
   .responsive-center-thumbnails:nth-child(2)
     float none
@@ -247,13 +226,29 @@ a.thumbnail.square-thumbnail img {
     vertical-align top
 
   .title
-    margin-top 0px
-    margin-bottom 30px
+    margin-top 10px
 
-@media (max-width: 767px)
-  .title
+  .title small.phonetic
+    font-size 20px
+    margin-top -12px
+
+@media (max-width 767px)
+  .back-header > *
+    font-size 15px
+
+  .module-title, .topic-title
     margin-top 0px
-    margin-bottom 30px
+    font-size 28px
+
+  .title
+    margin-top 10px
+
+  .title
+    font-size 30px
+
+  .title small.phonetic
+    font-size 12px
+    margin-top -9px
 
 
 
