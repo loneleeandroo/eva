@@ -49,8 +49,8 @@ Template[templateName].topics= ->
         }
       ]
       imageUrl: "/images/introduction.png"
-      topicUrl: "#"
-      private: true
+      topicUrl: "/learn/module-x/introduction"
+      private: false
       _id: new Meteor.Collection.ObjectID()._str
     }
     {
@@ -112,7 +112,7 @@ Template[templateName].topics= ->
           display: "オーストラリア"
         }
       ]
-      imageUrl: ""
+      imageUrl: "/images/japanvsaustralia.png"
       topicUrl: "#"
       private: true
       _id: new Meteor.Collection.ObjectID()._str
