@@ -1,17 +1,6 @@
 # Set template name
 templateName = "introduction"
 
-shuffleArray = (array) ->
-  i = array.length - 1
-
-  while i > 0
-    j = Math.floor(Math.random() * (i + 1))
-    temp = array[i]
-    array[i] = array[j]
-    array[j] = temp
-    i--
-  array
-
 # Route
 Router.map ->
   @route templateName,
@@ -30,7 +19,7 @@ Template[templateName].modalButtonText = ->
 
 # Rendered
 Template[templateName].rendered = ->
-  console.log(new Meteor.Collection.ObjectID()._str)
+  Meteor.typeahead( $('.typeahead') )
   $('header').hide()
   $('footer').hide()
   $('html').css('background-color', '#e74c3c')
@@ -54,26 +43,23 @@ Template[templateName].events
   "click a.check-answer": (event) ->
     # template data, if any, is available in 'this'
     answerBasket = $('.answer-basket')
-    questionBasket = $('#question-basket')
-    valid = false;
+    valid = true;
     items = Template[templateName].items()
 
-    if questionBasket.children().length is 0
-      valid = true
-      $.each answerBasket, (k, v) ->
-        children = $(v).children()
-        basketName = $(v).attr('id')
+    $.each answerBasket, (k, v) ->
+      basketName = $(v).attr('id')
+      childName = $(v).val()
 
-        $.each children, (key, value) ->
-          childName = $(value).attr('id')
+      if childName
+        i = 0
 
-          i = 0
-
-          while i < items.length
-            if items[i].english is childName
-              if items[i].group isnt basketName
-                valid = false
-            i++
+        while i < items.length
+          if items[i].value is childName
+            if items[i].group isnt basketName
+              valid = false
+          i++
+      else
+        valid = false
 
     if valid
       $('#createNewModal').modal('show')
@@ -95,69 +81,68 @@ Template[templateName].items = ->
   items = [
     { 
       _id: "58065c7ae6c5bff2f97deb85"
-      english: "America"
+      value: "America"
       group: "passage-position-1"
     }
     { 
       _id: "03b1d20081a2d28f60ee1344"
-      english: "Japan"
+      value: "Japan"
       group: "passage-position-2"
     }
     { 
       _id: "dc36c3d67642c6fa0c06d111"
-      english: "24 hours"
+      value: "24 hours"
       group: "passage-position-3"
     }
     { 
       _id: "3692640a941f40e5325ebaf7"
-      english: "cans"
+      value: "cans"
       group: "passage-position-4"
     }
     { 
       _id: "e38d4216c4dec4c4a540bce4"
-      english: "bottles"
+      value: "bottles"
       group: "passage-position-5"
     }
     { 
       _id: "2c0d2c5308542f094f375276"
-      english: "onigiri"
+      value: "onigiri"
       group: "passage-position-6"
     }
     { 
       _id: "52d91290522a4005f36e57b6"
-      english: "sandwiches"
+      value: "sandwiches"
       group: "passage-position-7"
     }
     { 
       _id: "44cd30615151949ef16c2077"
-      english: "spaghetti"
+      value: "spaghetti"
       group: "passage-position-8"
     }
     { 
       _id: "5c15889ef731f8778f2a4fbf"
-      english: "sake"
+      value: "sake"
       group: "passage-position-9"
     }
     { 
       _id: "f330390061e39aeeb2fe1e44"
-      english: "snacks"
+      value: "snacks"
       group: "passage-position-10"
     }
     { 
       _id: "07728e062ae68cb9335d679a"
-      english: "services"
+      value: "services"
       group: "passage-position-11"
     }
     { 
       _id: "ed8fdbb7019de6aa27878a16"
-      english: "copy machines"
+      value: "copy machines"
       group: "passage-position-12"
     }
     { 
       _id: "7b388dceea9bb71de1bddc0d"
-      english: "salarymen"
+      value: "salarymen"
       group: "passage-position-13"
     }
   ]
-
-  shuffleArray(items)
+  items

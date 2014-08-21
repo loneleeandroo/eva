@@ -124,7 +124,7 @@ Template[templateName].topics= ->
           display: "デパート"
         }
       ]
-      imageUrl: ""
+      imageUrl: "/images/departmentstores.png"
       topicUrl: "#"
       private: true
       _id: new Meteor.Collection.ObjectID()._str
@@ -136,7 +136,20 @@ Template[templateName].topics= ->
           display: "スーパー"
         }
       ]
-      imageUrl: ""
+      imageUrl: "/images/supermarkets.png"
+      topicUrl: "#"
+      private: true
+      _id: new Meteor.Collection.ObjectID()._str
+    }
+    {
+      english: "Money"
+      japanese: [
+        {
+          display: "お金"
+          phonetic: "おかね"
+        }
+      ]
+      imageUrl: "/images/money.png"
       topicUrl: "#"
       private: true
       _id: new Meteor.Collection.ObjectID()._str

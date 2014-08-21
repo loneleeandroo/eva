@@ -1,7 +1,7 @@
 {
   "packages": {
     "iron-router": {
-        "version": "0.8.2"
+      "version": "0.8.2"
     },
     "bootstrap-3": {},
     "accounts-entry": {},
@@ -10,6 +10,7 @@
     "holder": {},
     "jquery-ui-sortable": {},
     "slick": {},
-    "buzz.js": {}
+    "buzz.js": {},
+    "typeahead": {}
   }
 }

@@ -183,23 +183,94 @@ a.back-headerhover i
   color white
   opacity 0.8  
 
-p.lead.passage span
+p.lead.passage
+  color white
+  line-height 60px
+
+p.lead.passage span.blank
   color white
   display inline-block
   vertical-align middle
-  line-height 100px
-
-p.lead.passage span.blank
   top 0
   min-width 180px
   color inherit
   padding 0
 
-p.lead.passage span ul.basket 
-  margin-bottom 0
+p.lead.passage span.blank .form-control
+  border 2px solid #ddd
+  color #34495e
+  font-size 15px
+  line-height 1.467
+  padding 8px 12px
+  height 42px
+  -webkit-appearance none
+  border-radius 6px
+  -webkit-box-shadow none
+  box-shadow none
+  -webkit-transition border .25s linear, color .25s linear, background-color .25s linear
+  transition border .25s linear, color .25s linear, background-color .25s linear
+  background transparent
+  text-align center
+  color white
 
-p.lead.passage span ul.basket li
-  display block
+p.lead.passage span.blank .form-control:focus 
+  border-color white
+  outline 0
+  -webkit-box-shadow none
+  box-shadow none
+
+/* basic typeahead styles */
+.typeahead,
+.tt-query,
+.tt-hint
+  border 2px solid #ccc
+  -webkit-border-radius 8px
+     -moz-border-radius 8px
+          border-radius 8px
+  outline none
+
+.typeahead
+  background-color #fff
+
+.typeahead:focus
+  border 2px solid #0097cf
+
+.tt-query
+  -webkit-box-shadow inset 0 1px 1px rgba(0, 0, 0, 0.075)
+     -moz-box-shadow inset 0 1px 1px rgba(0, 0, 0, 0.075)
+          box-shadow inset 0 1px 1px rgba(0, 0, 0, 0.075)
+
+.tt-hint
+  color #999
+
+.tt-dropdown-menu
+  margin-top 3px
+  padding 8px 0
+  background-color #fff
+  border 1px solid #ccc
+  border 1px solid rgba(0, 0, 0, 0.2)
+  -webkit-border-radius 8px
+     -moz-border-radius 8px
+          border-radius 8px
+  -webkit-box-shadow 0 5px 10px rgba(0,0,0,.2)
+     -moz-box-shadow 0 5px 10px rgba(0,0,0,.2)
+          box-shadow 0 5px 10px rgba(0,0,0,.2)
+
+
+.tt-suggestion
+  padding 3px 20px
+  font-size 18px
+  line-height 24px
+
+
+.tt-suggestion.tt-cursor
+  color #fff
+  background-color #0097cf
+
+.tt-suggestion p
+  margin 0
+  color black
+
 
 // Responsive
 @media (min-width 1200px)
