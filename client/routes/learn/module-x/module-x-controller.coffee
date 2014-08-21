@@ -40,34 +40,106 @@ Template[templateName].modules= ->
   modules
 
 Template[templateName].topics= ->
-  topics = []
-  i = 0
-
-  while i < 8
-    data =
-      english: "Topic " + (i+1)
+  topics = [
+    {
+      english: "Introduction"
       japanese: [
         {
-          display: "買い物"
-          phonetic: "かいもの"
+          display: "イントロダクション"
+        }
+      ]
+      imageUrl: "/images/introduction.png"
+      topicUrl: "#"
+      private: true
+      _id: new Meteor.Collection.ObjectID()._str
+    }
+    {
+      english: "Products 1"
+      japanese: [
+        {
+          display: "商品"
+          phonetic: "しょうひん"
+        }
+        {
+          display: "①"
+        }
+      ]
+      imageUrl: "/images/products1.png"
+      topicUrl: "/learn/module-x/products-1"
+      private: false
+      _id: new Meteor.Collection.ObjectID()._str
+    }
+    {
+      english: "Products 2"
+      japanese: [
+        {
+          display: "商品"
+          phonetic: "しょうひん"
+        }
+        {
+          display: "②"
+        }
+      ]
+      imageUrl: "/images/products2.png"
+      topicUrl: "/learn/module-x/products-2"
+      private: false
+      _id: new Meteor.Collection.ObjectID()._str
+    }
+    {
+      english: "Expressions"
+      japanese: [
+        {
+          display: "表現"
+          phonetic: "ひょうげん"
+        }
+      ]
+      imageUrl: "/images/expressions.png"
+      topicUrl: "#"
+      private: true
+      _id: new Meteor.Collection.ObjectID()._str
+    }
+    {
+      english: "Japan vs Australia"
+      japanese: [
+        {
+          display: "日本"
+          phonetic: "にほん"
         }
         {
           display: "と"
         }
         {
-          display: "コンビニ"
+          display: "オーストラリア"
         }
       ]
-      imageUrl: "/images/shopping.png"
+      imageUrl: ""
       topicUrl: "#"
       private: true
       _id: new Meteor.Collection.ObjectID()._str
-
-    if i is 0
-      data.topicUrl = '/learn/module-x/topic-x/slide-1'
-      data.private = false
-
-    topics.push data
-    i++
-
+    }
+    {
+      english: "Department Stores"
+      japanese: [
+        {
+          display: "デパート"
+        }
+      ]
+      imageUrl: ""
+      topicUrl: "#"
+      private: true
+      _id: new Meteor.Collection.ObjectID()._str
+    }
+    {
+      english: "Supermarkets"
+      japanese: [
+        {
+          display: "スーパー"
+        }
+      ]
+      imageUrl: ""
+      topicUrl: "#"
+      private: true
+      _id: new Meteor.Collection.ObjectID()._str
+    }
+  ]
   topics
