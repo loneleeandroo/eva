@@ -1,0 +1,129 @@
+template(name="introduction")
+  .row.learn-header(style="")
+    span.back-header(style="color:white;text-align:center;left:0;width:100%;position:absolute;")
+      h3 Exercise 1 of 1
+    a.back-header.pull-left(href="/learn/module-x", style="color:white;")
+      h3
+        i.fa.fa-home
+        span Topics
+    a.back-header.pull-right.check-answer(href="#", style="color:white;")
+      h3
+        span Check
+        i.fa.fa-question-circle
+  
+  .container
+    .row
+      .col-xs-12.text-center
+        h1(style="color:white;") Watch the Video And Fill in the Blanks for the Passage Below
+    .embed-responsive.embed-responsive-16by9
+      iframe.embed-responsive-item(src="http://www.youtube.com/embed/R5FWDENv-bI")
+
+  hr(style="margin-top: 50px; margin-bottom: 50px;")
+
+  .container
+    .row
+      .col-xs-12.text-center
+        h1(style="color:white;") Drag these Words into the Blanks in the Passage Below
+        ul#question-basket.items.free.basket(style="padding-top:40px")
+          each items
+            li.draggable(id="{{english}}")
+              .panel.panel-default
+                .panel-body
+                  h4 {{english}}
+
+  hr(style="margin-top: 50px; margin-bottom: 50px;")
+
+  .container
+    p.lead.passage 
+      span 7-11 was started in 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-1") 
+      span in the 1950s and 
+      span its name meant 
+      span “a store that 
+      span remained open 
+      span from 7Am until 11PM”. 
+      span The concept was 
+      span a big hit around 
+      span America because not 
+      span many stores were open 
+      span for such long hours. 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-2") 
+      span has managed to 
+      span take 7-11 to the 
+      span next level, all 
+      span of their 7-11s 
+      span are open 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-3") 
+      span a day! 
+      span Further, they 
+      span have an incredible 
+      span variety of different 
+      span products. 
+      span There are 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-4") 
+      span of hot coffee and 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-5") 
+      span of hot tea for 
+      span the cold days, 
+      span and popular 
+      span Japanese snacks 
+      span such as rice balls
+      span wrapped in seaweed 
+      span called 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-6")  
+      span Fresh 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-7") 
+      span are made daily, 
+      span and pre-packed 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-8") 
+      span and other meals 
+      span can be microwaved 
+      span at the counter 
+      span and ready to eat 
+      span in minutes! 
+      span The selection of 
+      span cold drinks and 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-9") 
+      span will amaze you. 
+      span Of course, there are 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-10") 
+      span to go with these too. 
+      span It also offers many 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-11") 
+      span other than food 
+      span and drink, such as 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-12")  
+      span and bill paying. 
+      span Perhaps this has 
+      span developed to suit 
+      span the busy lifestyles 
+      span of Japanese 
+      span.blank
+        ul.basket.items.answer-basket.text-center(style="min-height:75px;padding:5px;", id="passage-position-13") 
+      span and people hurrying 
+      span from place to place. 
+
+  #createNewModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h4.modal-title {{modalTitle}}
+        .modal-body
+          p {{modalBody}}
+        .modal-footer
+          button.btn.btn-primary#modal-button(type='button') {{modalButtonText}}
+          
+        
+        
